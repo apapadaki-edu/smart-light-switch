@@ -94,5 +94,5 @@ with topic of "luminosity/SwitchPj3/dat" and in the form of "luminosity:servo_mo
 | Blynk Cloud | Free - limited options |
 | HiveMQ & HiveMQ Dashboard | [mqtt-dashboard.com/index.com](mqtt-dashboard.com/index.com) mqtt broker & client-based messaging platform (uses mqtt publish-subscribe protocol) and the dashboard for testing and  monitoring traffic|
 
-
+<br><br>
 I would be extremely grateful for any feedback or tips on how to improve or change these projects. It would help immensely my development as a programmer. 
