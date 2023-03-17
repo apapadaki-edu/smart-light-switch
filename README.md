@@ -3,8 +3,7 @@ Simple light switch (controlled from a blynk mobile app).
 
 ### Circuit design
 
-![circuit design](circuit_design.png)
-
+<img src="circuit_design.png" alt="circuit design" width="500px">
 
 ### Specifications 
 
