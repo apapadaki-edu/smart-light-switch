@@ -2,7 +2,28 @@
 Simple light switch (controlled from a blynk mobile app).
 
 Circuit design
-![circuit design]()
+![circuit design](circuit_design.png)
+
+Specs
+
+| Hardware | Details |
+| --- | --- |
+| 1 x NodeMCU Lua ESP8266 | RISC microcontroller, 4MB flash and integrated Wi-Fi chip |
+| 1 x SG90 Micro Servo | Small servo motor with rotation up to 180 degrees |
+| 1 x Photoresistor | Small circuit component that detects changes in luminocity |
+| 1 x DS1302 RTC | real time clock chip
+| 1x 1kΩ resistor | |
+|  <br>  | <br>   |
+| **Software & other** | **Details** |
+| Ubuntu Linux | v20.04.3 (development OS) |
+| redis-server | v4.0.7 (installed locally) |
+| node-red | v2.1.5 (installed locally) |
+| Arduino IDE | v1.8.15 and the following libraries: <br> * ESP8266WiFi <br> * BlynkSimpleEsp8266 <br> * Servo <br> * ThreeWire <br> * RTcDS1302 <br> * PubSubClient |
+| Blynk Cloud | Free - limited options |
+| HiveMQ & HiveMQ Dashboard | [mqtt-dashboard.com/index.com](mqtt-dashboard.com/index.com) mqtt broker & client-based messaging platform (uses mqtt publish-subscribe protocol) and the dashboard for testing and  monitoring traffic|
+
+
+
 The switch's state in stored in blynk app's V0 virtual port, so, we need to read the state of that port.
 ```
 //blynk connection read params
@@ -56,7 +77,7 @@ void loop() {
 ```
 
 Luminosity value read from the analog pin, along with the switch's state (either being on or off, this depends on servo's angle; 0 degrees (closed), 130 degrees (open)), is published to the broker. 
-with theme of "luminosity/SwitchPj3/dat" and in the form of "luminosity:servo_motor_angle";
+with topic of "luminosity/SwitchPj3/dat" and in the form of "luminosity:servo_motor_angle";
 -- The angles were decided with my house's switches in mind. Since I could not alter the switch from the inside, I used a servo motor that pushes up or down the already installed switch. --
 
 ```
