@@ -93,3 +93,6 @@ with topic of "luminosity/SwitchPj3/dat" and in the form of "luminosity:servo_mo
   } 
 } // end loop
 ```
+<br><br>
+
+I would be extremely grateful for any feedback or tips on how to improve or change these projects. It would help immensely my development as a programmer. 
