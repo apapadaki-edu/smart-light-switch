@@ -5,26 +5,7 @@ Simple light switch (controlled from a blynk mobile app).
 
 <img src="circuit_design.png" alt="circuit design" width="500px">
 
-### Specifications 
-
-
-| Hardware | Details |
-| --- | --- |
-| 1 x NodeMCU Lua ESP8266 | RISC microcontroller, 4MB flash and integrated Wi-Fi chip |
-| 1 x SG90 Micro Servo | Small servo motor with rotation up to 180 degrees |
-| 1 x Photoresistor | Small circuit component that detects changes in luminocity |
-| 1 x DS1302 RTC | real time clock chip
-| 1x 1kΩ resistor | |
-|  <br>  | <br>   |
-| **Software & other** | **Details** |
-| Ubuntu Linux | v20.04.3 (development OS) |
-| redis-server | v4.0.7 (installed locally) |
-| node-red | v2.1.5 (installed locally) |
-| Arduino IDE | v1.8.15 and the following libraries: <br> * ESP8266WiFi <br> * BlynkSimpleEsp8266 <br> * Servo <br> * ThreeWire <br> * RTcDS1302 <br> * PubSubClient |
-| Blynk Cloud | Free - limited options |
-| HiveMQ & HiveMQ Dashboard | [mqtt-dashboard.com/index.com](mqtt-dashboard.com/index.com) mqtt broker & client-based messaging platform (uses mqtt publish-subscribe protocol) and the dashboard for testing and  monitoring traffic|
-
-
+### Some code explanation
 
 The switch's state in stored in blynk app's V0 virtual port, so, we need to read the state of that port.
 ```
@@ -94,5 +75,24 @@ with topic of "luminosity/SwitchPj3/dat" and in the form of "luminosity:servo_mo
 } // end loop
 ```
 <br><br>
+
+### Specifications 
+
+| Hardware | Details |
+| --- | --- |
+| 1 x NodeMCU Lua ESP8266 | RISC microcontroller, 4MB flash and integrated Wi-Fi chip |
+| 1 x SG90 Micro Servo | Small servo motor with rotation up to 180 degrees |
+| 1 x Photoresistor | Small circuit component that detects changes in luminocity |
+| 1 x DS1302 RTC | real time clock chip
+| 1x 1kΩ resistor | |
+|  <br>  | <br>   |
+| **Software & other** | **Details** |
+| Ubuntu Linux | v20.04.3 (development OS) |
+| redis-server | v4.0.7 (installed locally) |
+| node-red | v2.1.5 (installed locally) |
+| Arduino IDE | v1.8.15 and the following libraries: <br> * ESP8266WiFi <br> * BlynkSimpleEsp8266 <br> * Servo <br> * ThreeWire <br> * RTcDS1302 <br> * PubSubClient |
+| Blynk Cloud | Free - limited options |
+| HiveMQ & HiveMQ Dashboard | [mqtt-dashboard.com/index.com](mqtt-dashboard.com/index.com) mqtt broker & client-based messaging platform (uses mqtt publish-subscribe protocol) and the dashboard for testing and  monitoring traffic|
+
 
 I would be extremely grateful for any feedback or tips on how to improve or change these projects. It would help immensely my development as a programmer. 
