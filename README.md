@@ -7,19 +7,6 @@ Simple light switch (controlled from a blynk mobile app).
 
 ### Some code explanation
 
-The switch's state in stored in blynk app's V0 virtual port, so, we need to read the state of that port.
-```
-//blynk connection read params
-int appState;
-BLYNK_WRITE(V0)
-{
-  appState = param.asInt();
-}
-BLYNK_CONNECTED(){
-  Blynk.syncVirtual(V0);
-}
-```
-
 Setting up and initializing the system parameters and components.
 ```
 void setup() {
