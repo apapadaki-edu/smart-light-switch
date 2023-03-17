@@ -1,6 +1,5 @@
 
-
-System set-up.
+Simple light switch (controlled from a blynk mobile app).
 
 The switch's state in stored in blynk app's V0 virtual port, so, we need to read the state of that port.
 ```
