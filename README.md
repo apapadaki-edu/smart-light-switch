@@ -1,10 +1,13 @@
 
 Simple light switch (controlled from a blynk mobile app).
 
-Circuit design
+### Circuit design
+
 ![circuit design](circuit_design.png)
 
-###Specifications 
+
+### Specifications 
+
 
 | Hardware | Details |
 | --- | --- |
