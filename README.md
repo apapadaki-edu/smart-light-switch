@@ -53,9 +53,9 @@ void loop() {
   }
 ```
 
-The luminosity read from the analog pin, along with the state of the switch (either being on or off, this depends on the angle of the servo motor; 0 degrees (closed), 130 degrees (open)), is published to the broker. 
+Luminosity value read from the analog pin, along with the switch's state (either being on or off, this depends on servo's angle; 0 degrees (closed), 130 degrees (open)), is published to the broker. 
 with theme of "luminosity/SwitchPj3/dat" and in the form of "luminosity:servo_motor_angle";
--- The angles were decided, with my home switches in mind. Since I could not alter the switch in my house from withing I used a servo motor the pushes the already installed switch up or down. --
+-- The angles were decided with my house's switches in mind. Since I could not alter the switch from the inside, I used a servo motor that pushes up or down the already installed switch. --
 
 ```
     /*read the light measurement every 10 minutes*/
