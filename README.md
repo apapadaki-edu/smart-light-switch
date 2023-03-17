@@ -1,6 +1,8 @@
 
 Simple light switch (controlled from a blynk mobile app).
 
+Circuit design
+![circuit design]()
 The switch's state in stored in blynk app's V0 virtual port, so, we need to read the state of that port.
 ```
 //blynk connection read params
